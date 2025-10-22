@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Follow Along Workouts - Your Personal Fitness Companion</title>
+		<meta
+			name="description"
+			content="Transform your fitness journey with Follow Along Workouts. Access premium workout videos, track your progress, and achieve your fitness goals with our comprehensive workout app."
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+		<link rel="icon" type="image/png" href="assets/favicon.png" />
+		<link rel="apple-touch-icon" href="assets/favicon.png" />
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="nav">
+			<div class="nav__container">
+				<div class="nav__logo">
+					<img src="assets/logo.png" alt="Follow Along Workouts" class="nav__logo-img" />
+					<span class="nav__logo-text">Follow Along Workouts</span>
+				</div>
+				<div class="nav__menu" id="nav-menu">
+					<a href="#features" class="nav__link">Features</a>
+					<a href="#benefits" class="nav__link">Benefits</a>
+					<a href="#pricing" class="nav__link">Pricing</a>
+					<a href="#download" class="nav__link nav__link--cta">Download Now</a>
+				</div>
+				<button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+					<span class="nav__toggle-line"></span>
+					<span class="nav__toggle-line"></span>
+					<span class="nav__toggle-line"></span>
+				</button>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="hero__container">
+				<div class="hero__content">
+					<h1 class="hero__title">
+						Transform Your Fitness Journey with
+						<span class="hero__title--highlight">Follow Along Workouts</span>
+					</h1>
+					<p class="hero__description">
+						Access premium workout videos, track your progress, and achieve your fitness goals with our comprehensive workout app. Start your 2-week free trial
+						today!
+					</p>
+					<div class="hero__buttons">
+						<a href="#download" class="btn btn--primary btn--large">
+							<img src="assets/google-play-badge.png" alt="Get it on Google Play" class="btn__icon" />
+							Download Free
+						</a>
+						<a href="#features" class="btn btn--secondary btn--large"> Learn More </a>
+					</div>
+					<div class="hero__stats">
+						<div class="hero__stat">
+							<span class="hero__stat-number">10K+</span>
+							<span class="hero__stat-label">Active Users</span>
+						</div>
+						<div class="hero__stat">
+							<span class="hero__stat-number">500+</span>
+							<span class="hero__stat-label">Workout Videos</span>
+						</div>
+						<div class="hero__stat">
+							<span class="hero__stat-number">4.8★</span>
+							<span class="hero__stat-label">App Rating</span>
+						</div>
+					</div>
+				</div>
+				<div class="hero__image">
+					<img src="assets/hero-mockup.png" alt="Follow Along Workouts App" class="hero__img" />
+				</div>
+			</div>
+		</section>
+
+		<!-- Features Section -->
+		<section class="features" id="features">
+			<div class="features__container">
+				<div class="features__header">
+					<h2 class="features__title">Why Choose Follow Along Workouts?</h2>
+					<p class="features__subtitle">Everything you need to achieve your fitness goals in one powerful app</p>
+				</div>
+				<div class="features__grid">
+					<div class="feature-card">
+						<div class="feature-card__icon">
+							<img src="assets/icons/workout-videos.svg" alt="Workout Videos" class="feature-card__icon-img" />
+						</div>
+						<h3 class="feature-card__title">Premium Workout Videos</h3>
+						<p class="feature-card__description">Access hundreds of professionally crafted workout videos for all fitness levels and goals.</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-card__icon">
+							<img src="assets/icons/progress-tracking.svg" alt="Progress Tracking" class="feature-card__icon-img" />
+						</div>
+						<h3 class="feature-card__title">Track Your Progress</h3>
+						<p class="feature-card__description">Monitor your workout history and see your fitness journey unfold with detailed progress tracking.</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-card__icon">
+							<img src="assets/icons/save-workouts.svg" alt="Save Workouts" class="feature-card__icon-img" />
+						</div>
+						<h3 class="feature-card__title">Save Workouts</h3>
+						<p class="feature-card__description">Save your favorite workouts for quick access and create personalized workout collections.</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-card__icon">
+							<img src="assets/icons/sync-devices.svg" alt="Sync Across Devices" class="feature-card__icon-img" />
+						</div>
+						<h3 class="feature-card__title">Sync Across Devices</h3>
+						<p class="feature-card__description">Your progress and preferences sync seamlessly across all your devices for a consistent experience.</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-card__icon">
+							<img src="assets/icons/ad-free.svg" alt="Ad-Free Experience" class="feature-card__icon-img" />
+						</div>
+						<h3 class="feature-card__title">Ad-Free Experience</h3>
+						<p class="feature-card__description">Focus on your workouts without interruptions with our completely ad-free premium experience.</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-card__icon">
+							<img src="assets/icons/advanced-filters.svg" alt="Advanced Filters" class="feature-card__icon-img" />
+						</div>
+						<h3 class="feature-card__title">Advanced Filters</h3>
+						<p class="feature-card__description">Find the perfect workout with advanced filtering options for duration, difficulty, and muscle groups.</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-card__icon">
+							<img src="assets/icons/progress-tracking.svg" alt="Detailed Statistics" class="feature-card__icon-img" />
+						</div>
+						<h3 class="feature-card__title">Detailed Statistics</h3>
+						<p class="feature-card__description">Track your progress with comprehensive insights including streaks, frequency, and performance analytics.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Benefits Section -->
+		<section class="benefits" id="benefits">
+			<div class="benefits__container">
+				<div class="benefits__content">
+					<h2 class="benefits__title">Unlock Your Full Potential</h2>
+					<p class="benefits__description">
+						Join thousands of users who have transformed their fitness journey with Follow Along Workouts. Our comprehensive platform provides everything you
+						need to achieve your health and fitness goals.
+					</p>
+					<div class="benefits__list">
+						<div class="benefit-item">
+							<div class="benefit-item__icon">
+								<img src="assets/icons/checkmark.svg" alt="Checkmark" class="benefit-item__icon-img" />
+							</div>
+							<div class="benefit-item__content">
+								<h3 class="benefit-item__title">Save workouts for quick access</h3>
+								<p class="benefit-item__description">Build your personal library of favorite workouts</p>
+							</div>
+						</div>
+						<div class="benefit-item">
+							<div class="benefit-item__icon">
+								<img src="assets/icons/checkmark.svg" alt="Checkmark" class="benefit-item__icon-img" />
+							</div>
+							<div class="benefit-item__content">
+								<h3 class="benefit-item__title">Track your workout history</h3>
+								<p class="benefit-item__description">Monitor your progress and celebrate your achievements</p>
+							</div>
+						</div>
+						<div class="benefit-item">
+							<div class="benefit-item__icon">
+								<img src="assets/icons/checkmark.svg" alt="Checkmark" class="benefit-item__icon-img" />
+							</div>
+							<div class="benefit-item__content">
+								<h3 class="benefit-item__title">Sync data across all devices</h3>
+								<p class="benefit-item__description">Seamless experience whether you're at home or on the go</p>
+							</div>
+						</div>
+						<div class="benefit-item">
+							<div class="benefit-item__icon">
+								<img src="assets/icons/checkmark.svg" alt="Checkmark" class="benefit-item__icon-img" />
+							</div>
+							<div class="benefit-item__content">
+								<h3 class="benefit-item__title">Ad-free experience</h3>
+								<p class="benefit-item__description">Focus on your fitness without distractions</p>
+							</div>
+						</div>
+						<div class="benefit-item">
+							<div class="benefit-item__icon">
+								<img src="assets/icons/checkmark.svg" alt="Checkmark" class="benefit-item__icon-img" />
+							</div>
+							<div class="benefit-item__content">
+								<h3 class="benefit-item__title">View detailed statistics</h3>
+								<p class="benefit-item__description">Track streaks, frequency, and performance insights</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="benefits__image">
+					<img src="assets/benefits-mockup.png" alt="App Benefits" class="benefits__img" />
+				</div>
+			</div>
+		</section>
+
+		<!-- Pricing Section -->
+		<section class="pricing" id="pricing">
+			<div class="pricing__container">
+				<div class="pricing__header">
+					<h2 class="pricing__title">Choose Your Plan</h2>
+					<p class="pricing__subtitle">Start with a 2-week free trial, then choose the plan that works for you</p>
+				</div>
+				<div class="pricing__grid">
+					<div class="pricing-card">
+						<div class="pricing-card__header">
+							<h3 class="pricing-card__title">Monthly Plan</h3>
+							<div class="pricing-card__price">
+								<span class="pricing-card__currency">$</span>
+								<span class="pricing-card__amount">5.99</span>
+								<span class="pricing-card__period">/month</span>
+							</div>
+						</div>
+						<div class="pricing-card__features">
+							<div class="pricing-card__feature">
+								<img src="assets/icons/checkmark.svg" alt="Included" class="pricing-card__feature-icon" />
+								<span>All premium features</span>
+							</div>
+							<div class="pricing-card__feature">
+								<img src="assets/icons/checkmark.svg" alt="Included" class="pricing-card__feature-icon" />
+								<span>2-week free trial</span>
+							</div>
+							<div class="pricing-card__feature">
+								<img src="assets/icons/checkmark.svg" alt="Included" class="pricing-card__feature-icon" />
+								<span>Cancel anytime</span>
+							</div>
+						</div>
+						<a href="#download" class="pricing-card__button">Start Free Trial</a>
+					</div>
+					<div class="pricing-card">
+						<div class="pricing-card__header">
+							<h3 class="pricing-card__title">3-Month Plan</h3>
+							<div class="pricing-card__price">
+								<span class="pricing-card__currency">$</span>
+								<span class="pricing-card__amount">15.99</span>
+								<span class="pricing-card__period">/3 months</span>
+							</div>
+							<div class="pricing-card__savings">$5.33/month</div>
+						</div>
+						<div class="pricing-card__features">
+							<div class="pricing-card__feature">
+								<img src="assets/icons/checkmark.svg" alt="Included" class="pricing-card__feature-icon" />
+								<span>All premium features</span>
+							</div>
+							<div class="pricing-card__feature">
+								<img src="assets/icons/checkmark.svg" alt="Included" class="pricing-card__feature-icon" />
+								<span>2-week free trial</span>
+							</div>
+							<div class="pricing-card__feature">
+								<img src="assets/icons/checkmark.svg" alt="Included" class="pricing-card__feature-icon" />
+								<span>Save 11% vs monthly</span>
+							</div>
+						</div>
+						<a href="#download" class="pricing-card__button">Start Free Trial</a>
+					</div>
+					<div class="pricing-card">
+						<div class="pricing-card__header">
+							<h3 class="pricing-card__title">6-Month Plan</h3>
+							<div class="pricing-card__price">
+								<span class="pricing-card__currency">$</span>
+								<span class="pricing-card__amount">22.99</span>
+								<span class="pricing-card__period">/6 months</span>
+							</div>
+							<div class="pricing-card__savings">$3.83/month</div>
+						</div>
+						<div class="pricing-card__features">
+							<div class="pricing-card__feature">
+								<img src="assets/icons/checkmark.svg" alt="Included" class="pricing-card__feature-icon" />
+								<span>All premium features</span>
+							</div>
+							<div class="pricing-card__feature">
+								<img src="assets/icons/checkmark.svg" alt="Included" class="pricing-card__feature-icon" />
+								<span>2-week free trial</span>
+							</div>
+							<div class="pricing-card__feature">
+								<img src="assets/icons/checkmark.svg" alt="Included" class="pricing-card__feature-icon" />
+								<span>Save 36% vs monthly</span>
+							</div>
+						</div>
+						<a href="#download" class="pricing-card__button">Start Free Trial</a>
+					</div>
+					<div class="pricing-card pricing-card--featured">
+						<div class="pricing-card__badge">Best Value</div>
+						<div class="pricing-card__header">
+							<h3 class="pricing-card__title">Annual Plan</h3>
+							<div class="pricing-card__price">
+								<span class="pricing-card__currency">$</span>
+								<span class="pricing-card__amount">29.99</span>
+								<span class="pricing-card__period">/year</span>
+							</div>
+							<div class="pricing-card__savings">$2.50/month</div>
+						</div>
+						<div class="pricing-card__features">
+							<div class="pricing-card__feature">
+								<img src="assets/icons/checkmark.svg" alt="Included" class="pricing-card__feature-icon" />
+								<span>All premium features</span>
+							</div>
+							<div class="pricing-card__feature">
+								<img src="assets/icons/checkmark.svg" alt="Included" class="pricing-card__feature-icon" />
+								<span>2-week free trial</span>
+							</div>
+							<div class="pricing-card__feature">
+								<img src="assets/icons/checkmark.svg" alt="Included" class="pricing-card__feature-icon" />
+								<span>Save 58% vs monthly</span>
+							</div>
+						</div>
+						<a href="#download" class="pricing-card__button">Start Free Trial</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Download Section -->
+		<section class="download" id="download">
+			<div class="download__container">
+				<div class="download__content">
+					<h2 class="download__title">Ready to Start Your Fitness Journey?</h2>
+					<p class="download__description">Download Follow Along Workouts today and begin your 2-week free trial. No commitment required - cancel anytime.</p>
+					<div class="download__buttons">
+						<a href="#" class="btn btn--primary btn--large download__button">
+							<img src="assets/google-play-badge.png" alt="Get it on Google Play" class="btn__icon" />
+							Download for Android
+						</a>
+						<a href="#" class="btn btn--secondary btn--large download__button">
+							<img src="assets/app-store-badge.png" alt="Download on the App Store" class="btn__icon" />
+							Download for iOS
+						</a>
+					</div>
+					<div class="download__features">
+						<div class="download__feature">
+							<img src="assets/icons/checkmark.svg" alt="Free Trial" class="download__feature-icon" />
+							<span>2-week free trial</span>
+						</div>
+						<div class="download__feature">
+							<img src="assets/icons/checkmark.svg" alt="No Commitment" class="download__feature-icon" />
+							<span>No commitment</span>
+						</div>
+						<div class="download__feature">
+							<img src="assets/icons/checkmark.svg" alt="Cancel Anytime" class="download__feature-icon" />
+							<span>Cancel anytime</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__brand">
+						<img src="assets/logo.png" alt="Follow Along Workouts" class="footer__logo" />
+						<p class="footer__description">Your personal fitness companion for achieving health and wellness goals.</p>
+					</div>
+					<div class="footer__links">
+						<div class="footer__column">
+							<h4 class="footer__column-title">Product</h4>
+							<a href="#features" class="footer__link">Features</a>
+							<a href="#pricing" class="footer__link">Pricing</a>
+							<a href="#download" class="footer__link">Download</a>
+						</div>
+						<div class="footer__column">
+							<h4 class="footer__column-title">Support</h4>
+							<a href="#" class="footer__link">Help Center</a>
+							<a href="#" class="footer__link">Contact Us</a>
+							<a href="#" class="footer__link">Privacy Policy</a>
+						</div>
+						<div class="footer__column">
+							<h4 class="footer__column-title">Company</h4>
+							<a href="#" class="footer__link">About Us</a>
+							<a href="#" class="footer__link">Terms of Service</a>
+							<a href="#" class="footer__link">Blog</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p class="footer__copyright">© 2024 Follow Along Workouts. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>

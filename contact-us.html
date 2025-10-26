@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact Us - Follow Along Workouts</title>
+		<meta name="description" content="Contact Follow Along Workouts team" />
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+		<link rel="icon" type="image/png" href="assets/favicon.png" />
+		<link rel="apple-touch-icon" href="assets/favicon.png" />
+		<style>
+			.contact {
+				padding: 120px 0 80px;
+				background: #f8fafc;
+				min-height: 100vh;
+			}
+
+			.contact__container {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 0 1rem;
+			}
+
+			.contact__header {
+				margin-bottom: 3rem;
+				text-align: center;
+			}
+
+			.contact__title {
+				font-size: 2.5rem;
+				font-weight: 700;
+				color: #1a202c;
+				margin-bottom: 1rem;
+			}
+
+			.contact__subtitle {
+				font-size: 1.25rem;
+				color: #64748b;
+			}
+
+			.contact__content {
+				background: white;
+				padding: 3rem;
+				border-radius: 16px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+			}
+
+			.contact__info {
+				margin-bottom: 2.5rem;
+			}
+
+			.contact__message {
+				font-size: 1.1rem;
+				color: #4a5568;
+				line-height: 1.8;
+				margin-bottom: 2rem;
+			}
+
+			.contact__email-box {
+				background: linear-gradient(135deg, #39b5d5 0%, #3dc2ff 100%);
+				padding: 2rem;
+				border-radius: 12px;
+				text-align: center;
+				color: white;
+			}
+
+			.contact__email-label {
+				font-size: 0.95rem;
+				opacity: 0.9;
+				margin-bottom: 0.75rem;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				font-weight: 600;
+			}
+
+			.contact__email-link {
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: white;
+				text-decoration: none;
+				transition: transform 0.3s ease;
+				display: inline-block;
+			}
+
+			.contact__email-link:hover {
+				transform: translateY(-2px);
+				text-decoration: underline;
+			}
+
+			.contact__support-hours {
+				margin-top: 2rem;
+				padding-top: 2rem;
+				border-top: 1px solid #e2e8f0;
+			}
+
+			.contact__support-title {
+				font-size: 1.1rem;
+				font-weight: 600;
+				color: #1a202c;
+				margin-bottom: 1rem;
+			}
+
+			.contact__support-text {
+				color: #64748b;
+				line-height: 1.8;
+			}
+
+			@media (max-width: 768px) {
+				.contact__title {
+					font-size: 2rem;
+				}
+
+				.contact__content {
+					padding: 2rem 1.5rem;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.contact__title {
+					font-size: 1.75rem;
+				}
+
+				.contact__content {
+					padding: 1.5rem 1rem;
+				}
+
+				.contact__email-link {
+					font-size: 1.2rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="nav">
+			<div class="nav__container">
+				<div class="nav__logo">
+					<a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #333">
+						<img src="assets/logo.png" alt="Follow Along Workouts" class="nav__logo-img" />
+						<span class="nav__logo-text">Follow Along Workouts</span>
+					</a>
+				</div>
+				<div class="nav__menu" id="nav-menu">
+					<a href="index.html#features" class="nav__link">Features</a>
+					<a href="index.html#benefits" class="nav__link">Benefits</a>
+					<a href="index.html#pricing" class="nav__link">Pricing</a>
+					<a href="index.html#download" class="nav__link nav__link--cta">Download Now</a>
+				</div>
+				<button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+					<span class="nav__toggle-line"></span>
+					<span class="nav__toggle-line"></span>
+					<span class="nav__toggle-line"></span>
+				</button>
+			</div>
+		</nav>
+
+		<!-- Contact Section -->
+		<section class="contact">
+			<div class="contact__container">
+				<div class="contact__header">
+					<h1 class="contact__title">Contact Us</h1>
+					<p class="contact__subtitle">We're here to help you with any questions or concerns</p>
+				</div>
+
+				<div class="contact__content">
+					<div class="contact__info">
+						<p class="contact__message">
+							If you have questions about Follow Along Workouts, our features, premium subscription, or need technical support, we'd love to hear from you!
+						</p>
+
+						<div class="contact__email-box">
+							<p class="contact__email-label">Email Us</p>
+							<a href="mailto:followalongworkoutsofficial@gmail.com" class="contact__email-link">followalongworkoutsofficial@gmail.com</a>
+						</div>
+
+						<div class="contact__support-hours">
+							<h3 class="contact__support-title">What Can We Help With?</h3>
+							<ul class="privacy-section__list" style="margin-top: 1rem">
+								<li class="privacy-section__list-item">General questions about the app</li>
+								<li class="privacy-section__list-item">Technical support and troubleshooting</li>
+								<li class="privacy-section__list-item">Feature requests and feedback</li>
+								<li class="privacy-section__list-item">Privacy and data concerns</li>
+								<li class="privacy-section__list-item">Partnership and collaboration inquiries</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__brand">
+						<img src="assets/logo.png" alt="Follow Along Workouts" class="footer__logo" />
+						<p class="footer__description">Your personal fitness companion for achieving health and wellness goals.</p>
+					</div>
+					<div class="footer__links">
+						<div class="footer__column">
+							<h4 class="footer__column-title">Product</h4>
+							<a href="index.html#features" class="footer__link">Features</a>
+							<a href="index.html#pricing" class="footer__link">Pricing</a>
+							<a href="index.html#download" class="footer__link">Download</a>
+						</div>
+						<div class="footer__column">
+							<h4 class="footer__column-title">Support</h4>
+							<a href="contact-us.html" class="footer__link">Contact Us</a>
+							<a href="privacy-policy.html" class="footer__link">Privacy Policy</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p class="footer__copyright">© <span id="current-year">2025</span> Follow Along Workouts. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>

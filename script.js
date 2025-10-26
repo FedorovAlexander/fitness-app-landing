@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	initAnimations();
 	initPricingCards();
 	initDownloadButtons();
+	initCurrentYear();
 });
 
 // Navigation functionality
@@ -107,25 +108,6 @@ function initAnimations() {
 	});
 }
 
-// Pricing cards interaction
-function initPricingCards() {
-	const pricingCards = document.querySelectorAll('.pricing-card');
-
-	pricingCards.forEach((card) => {
-		card.addEventListener('mouseenter', function () {
-			this.style.transform = 'translateY(-10px) scale(1.02)';
-		});
-
-		card.addEventListener('mouseleave', function () {
-			if (!this.classList.contains('pricing-card--featured')) {
-				this.style.transform = 'translateY(0) scale(1)';
-			} else {
-				this.style.transform = 'scale(1.05)';
-			}
-		});
-	});
-}
-
 // Download buttons functionality
 function initDownloadButtons() {
 	const downloadButtons = document.querySelectorAll('.download__button, .pricing-card__button');
@@ -198,22 +180,45 @@ function animateCounters() {
 	const counters = document.querySelectorAll('.hero__stat-number');
 
 	counters.forEach((counter) => {
-		const target = parseInt(counter.textContent.replace(/[^\d]/g, ''));
-		const suffix = counter.textContent.replace(/[\d]/g, '');
-		let current = 0;
-		const increment = target / 50;
+		const originalText = counter.textContent;
 
-		const updateCounter = () => {
-			if (current < target) {
-				current += increment;
-				counter.textContent = Math.floor(current) + suffix;
-				requestAnimationFrame(updateCounter);
-			} else {
-				counter.textContent = target + suffix;
-			}
-		};
+		// Handle different counter types
+		if (originalText.includes('4,500+')) {
+			// Video count with comma
+			const target = 4500;
+			let current = 0;
+			const increment = target / 50;
 
-		updateCounter();
+			const updateCounter = () => {
+				if (current < target) {
+					current += increment;
+					counter.textContent = Math.floor(current).toLocaleString() + '+';
+					requestAnimationFrame(updateCounter);
+				} else {
+					counter.textContent = '4,500+';
+				}
+			};
+			updateCounter();
+		} else if (originalText.includes('4.8★')) {
+			// Rating with decimal
+			const target = 4.8;
+			let current = 0;
+			const increment = target / 50;
+
+			const updateCounter = () => {
+				if (current < target) {
+					current += increment;
+					counter.textContent = current.toFixed(1) + '★';
+					requestAnimationFrame(updateCounter);
+				} else {
+					counter.textContent = '4.8★';
+				}
+			};
+			updateCounter();
+		} else if (originalText === 'Free') {
+			// Static text - no animation needed
+			counter.textContent = 'Free';
+		}
 	});
 }
 
@@ -287,6 +292,26 @@ function preloadImages() {
 
 // Initialize image preloading
 preloadImages();
+
+// Set current year in footer
+function initCurrentYear() {
+	const currentYearElement = document.getElementById('current-year');
+	if (currentYearElement) {
+		const currentYear = new Date().getFullYear();
+		console.log('Setting year to:', currentYear);
+		currentYearElement.textContent = currentYear;
+	} else {
+		console.log('Current year element not found');
+	}
+}
+
+// Also set year immediately when script loads (fallback)
+document.addEventListener('DOMContentLoaded', function () {
+	const currentYearElement = document.getElementById('current-year');
+	if (currentYearElement) {
+		currentYearElement.textContent = new Date().getFullYear();
+	}
+});
 
 // Service Worker registration (for PWA capabilities)
 if ('serviceWorker' in navigator) {

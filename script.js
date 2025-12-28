@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	initNavigation();
 	initSmoothScrolling();
 	initAnimations();
-	initPricingCards();
 	initDownloadButtons();
 	initCurrentYear();
 });
@@ -279,19 +278,6 @@ document.addEventListener('keydown', function (e) {
 		}
 	}
 });
-
-// Preload critical images
-function preloadImages() {
-	const criticalImages = ['assets/hero-mockup.png', 'assets/benefits-mockup.png', 'assets/google-play-badge.png', 'assets/app-store-badge.png'];
-
-	criticalImages.forEach((src) => {
-		const img = new Image();
-		img.src = src;
-	});
-}
-
-// Initialize image preloading
-preloadImages();
 
 // Set current year in footer
 function initCurrentYear() {

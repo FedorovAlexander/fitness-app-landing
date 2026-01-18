@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	initAnimations();
 	initDownloadButtons();
 	initCurrentYear();
+	initCarousel();
 });
 
 // Navigation functionality
@@ -278,6 +279,133 @@ document.addEventListener('keydown', function (e) {
 		}
 	}
 });
+
+// Carousel functionality
+function initCarousel() {
+	const carousel = document.querySelector('.carousel');
+	if (!carousel) return;
+
+	const track = carousel.querySelector('.carousel__track');
+	const slides = carousel.querySelectorAll('.carousel__slide');
+	const indicators = carousel.querySelectorAll('.carousel__indicator');
+	const prevButton = carousel.querySelector('.carousel__button--prev');
+	const nextButton = carousel.querySelector('.carousel__button--next');
+
+	let currentSlide = 0;
+	const totalSlides = slides.length;
+
+	// Function to update carousel
+	function updateCarousel() {
+		const isMobile = window.innerWidth < 768;
+		const slideWidth = isMobile ? 100 : 204; // 100% on mobile, 204px on tablet/desktop
+		
+		if (isMobile) {
+			// On mobile, use percentage-based positioning
+			track.style.transform = `translateX(-${currentSlide * 100}%)`;
+		} else {
+			// On tablet/desktop, use fixed 204px width
+			track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+		}
+
+		// Update active slide
+		slides.forEach((slide, index) => {
+			slide.classList.toggle('carousel__slide--active', index === currentSlide);
+		});
+
+		// Update indicators
+		indicators.forEach((indicator, index) => {
+			indicator.classList.toggle('carousel__indicator--active', index === currentSlide);
+		});
+	}
+	
+	// Recalculate on window resize
+	let resizeTimeout;
+	window.addEventListener('resize', () => {
+		clearTimeout(resizeTimeout);
+		resizeTimeout = setTimeout(() => {
+			updateCarousel();
+		}, 250);
+	});
+
+	// Next slide
+	function nextSlide() {
+		currentSlide = (currentSlide + 1) % totalSlides;
+		updateCarousel();
+	}
+
+	// Previous slide
+	function prevSlide() {
+		currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+		updateCarousel();
+	}
+
+	// Go to specific slide
+	function goToSlide(index) {
+		currentSlide = index;
+		updateCarousel();
+	}
+
+	// Event listeners
+	if (nextButton) {
+		nextButton.addEventListener('click', nextSlide);
+	}
+
+	if (prevButton) {
+		prevButton.addEventListener('click', prevSlide);
+	}
+
+	// Indicator clicks
+	indicators.forEach((indicator, index) => {
+		indicator.addEventListener('click', () => goToSlide(index));
+	});
+
+	// Keyboard navigation
+	carousel.addEventListener('keydown', (e) => {
+		if (e.key === 'ArrowLeft') {
+			prevSlide();
+		} else if (e.key === 'ArrowRight') {
+			nextSlide();
+		}
+	});
+
+	// Auto-play (optional - uncomment if desired)
+	// let autoPlayInterval = setInterval(nextSlide, 5000);
+	// carousel.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+	// carousel.addEventListener('mouseleave', () => {
+	// 	autoPlayInterval = setInterval(nextSlide, 5000);
+	// });
+
+	// Touch/swipe support for mobile
+	let touchStartX = 0;
+	let touchEndX = 0;
+
+	carousel.addEventListener('touchstart', (e) => {
+		touchStartX = e.changedTouches[0].screenX;
+	});
+
+	carousel.addEventListener('touchend', (e) => {
+		touchEndX = e.changedTouches[0].screenX;
+		handleSwipe();
+	});
+
+	function handleSwipe() {
+		const swipeThreshold = 50;
+		const diff = touchStartX - touchEndX;
+
+		if (Math.abs(diff) > swipeThreshold) {
+			if (diff > 0) {
+				// Swipe left - next slide
+				nextSlide();
+			} else {
+				// Swipe right - previous slide
+				prevSlide();
+			}
+		}
+	}
+
+	// Initialize carousel
+	updateCarousel();
+}
 
 // Set current year in footer
 function initCurrentYear() {

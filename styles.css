@@ -259,6 +259,162 @@ p {
 	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
+/* Screenshots Carousel Section */
+.screenshots {
+	padding: 80px 0;
+	background: #f8fafc;
+}
+
+.screenshots__container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.screenshots__header {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.screenshots__title {
+	font-size: 2.5rem;
+	color: #1a202c;
+	margin-bottom: 1rem;
+}
+
+.screenshots__subtitle {
+	font-size: 1.25rem;
+	color: #64748b;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.carousel {
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+	.carousel {
+		max-width: 204px;
+	}
+}
+
+.carousel__track-container {
+	position: relative;
+	overflow: hidden;
+	border-radius: 20px;
+	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+	background: white;
+	display: flex;
+	justify-content: center;
+}
+
+@media (min-width: 768px) {
+	.carousel__track-container {
+		width: 204px;
+	}
+}
+
+.carousel__track {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	will-change: transform;
+}
+
+.carousel__slide {
+	min-width: 100%;
+	position: relative;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (min-width: 768px) {
+	.carousel__slide {
+		min-width: 204px;
+		width: 204px;
+	}
+}
+
+.carousel__slide--active {
+	opacity: 1;
+}
+
+.carousel__image {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: contain;
+}
+
+.carousel__button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(255, 255, 255, 0.9);
+	border: none;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 10;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	color: #39b5d5;
+}
+
+.carousel__button:hover {
+	background: #39b5d5;
+	color: white;
+	box-shadow: 0 6px 20px rgba(57, 181, 213, 0.3);
+	transform: translateY(-50%) scale(1.1);
+}
+
+.carousel__button--prev {
+	left: -25px;
+}
+
+.carousel__button--next {
+	right: -25px;
+}
+
+.carousel__nav {
+	display: flex;
+	justify-content: center;
+	gap: 0.75rem;
+	margin-top: 2rem;
+}
+
+.carousel__indicator {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	border: none;
+	background: #cbd5e0;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	padding: 0;
+}
+
+.carousel__indicator:hover {
+	background: #39b5d5;
+	transform: scale(1.2);
+}
+
+.carousel__indicator--active {
+	background: #39b5d5;
+	width: 32px;
+	border-radius: 6px;
+}
+
 /* Buttons */
 .btn {
 	display: inline-flex;
@@ -825,6 +981,23 @@ p {
 		gap: 1.5rem;
 	}
 
+	.carousel__button {
+		width: 40px;
+		height: 40px;
+	}
+
+	.carousel__button--prev {
+		left: 10px;
+	}
+
+	.carousel__button--next {
+		right: 10px;
+	}
+
+	.screenshots__title {
+		font-size: 2rem;
+	}
+
 	.download__buttons {
 		flex-direction: column;
 		align-items: center;
@@ -858,7 +1031,8 @@ p {
 	.features__title,
 	.benefits__title,
 	.pricing__title,
-	.download__title {
+	.download__title,
+	.screenshots__title {
 		font-size: 1.75rem;
 	}
 
@@ -926,9 +1100,23 @@ p {
 	.features__title,
 	.benefits__title,
 	.pricing__title,
-	.download__title {
+	.download__title,
+	.screenshots__title {
 		font-size: 1.4rem;
 		line-height: 1.2;
+	}
+
+	.carousel__button {
+		width: 35px;
+		height: 35px;
+	}
+
+	.carousel__button--prev {
+		left: 5px;
+	}
+
+	.carousel__button--next {
+		right: 5px;
 	}
 
 	.pricing-card {
@@ -980,7 +1168,8 @@ p {
 	.features__title,
 	.benefits__title,
 	.pricing__title,
-	.download__title {
+	.download__title,
+	.screenshots__title {
 		font-size: 1.2rem;
 	}
 

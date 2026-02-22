@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	initNavigation();
 	initSmoothScrolling();
 	initAnimations();
-	initDownloadButtons();
 	initCurrentYear();
 	initCarousel();
 });

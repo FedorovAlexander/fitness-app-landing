@@ -108,29 +108,6 @@ function initAnimations() {
 	});
 }
 
-// Download buttons functionality
-function initDownloadButtons() {
-	const downloadButtons = document.querySelectorAll('.download__button, .pricing-card__button');
-
-	downloadButtons.forEach((button) => {
-		button.addEventListener('click', function (e) {
-			// Add loading state
-			const originalText = this.textContent;
-			this.textContent = 'Loading...';
-			this.style.opacity = '0.7';
-
-			// Simulate loading (replace with actual download logic)
-			setTimeout(() => {
-				this.textContent = originalText;
-				this.style.opacity = '1';
-
-				// Show success message
-				showNotification('Download link will be available soon!', 'success');
-			}, 1500);
-		});
-	});
-}
-
 // Notification system
 function showNotification(message, type = 'info') {
 	// Remove existing notifications
@@ -232,7 +209,7 @@ const heroObserver = new IntersectionObserver(
 			}
 		});
 	},
-	{ threshold: 0.5 }
+	{ threshold: 0.5 },
 );
 
 const heroSection = document.querySelector('.hero');
@@ -298,7 +275,7 @@ function initCarousel() {
 	function updateCarousel() {
 		const isMobile = window.innerWidth < 768;
 		const slideWidth = isMobile ? 100 : 204; // 100% on mobile, 204px on tablet/desktop
-		
+
 		if (isMobile) {
 			// On mobile, use percentage-based positioning
 			track.style.transform = `translateX(-${currentSlide * 100}%)`;
@@ -317,7 +294,7 @@ function initCarousel() {
 			indicator.classList.toggle('carousel__indicator--active', index === currentSlide);
 		});
 	}
-	
+
 	// Recalculate on window resize
 	let resizeTimeout;
 	window.addEventListener('resize', () => {
@@ -481,7 +458,7 @@ window.addEventListener(
 				trackEvent('scroll_depth_100');
 			}
 		}
-	}, 100)
+	}, 100),
 );
 
 // Error handling

@@ -905,6 +905,7 @@ p {
 .download__button:hover {
 	background: #f8fafc;
 	transform: translateY(-2px);
+	color: #39b5d5;
 }
 
 .download__button--disabled {

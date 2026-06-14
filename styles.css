@@ -939,6 +939,69 @@ p {
 	filter: brightness(0) invert(1);
 }
 
+/* FAQ Section */
+.faq {
+	padding: 80px 0;
+	background: #f8fafc;
+}
+
+.faq__container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.faq__header {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.faq__title {
+	font-size: 2.5rem;
+	color: #1a202c;
+	margin-bottom: 1rem;
+}
+
+.faq__subtitle {
+	font-size: 1.125rem;
+	color: #64748b;
+}
+
+.faq__list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.faq__item {
+	background: white;
+	padding: 1.75rem 2rem;
+	border-radius: 16px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.faq__question {
+	font-size: 1.2rem;
+	color: #1a202c;
+	margin-bottom: 0.75rem;
+}
+
+.faq__answer {
+	color: #4a5568;
+	line-height: 1.7;
+	margin-bottom: 0;
+}
+
+.faq__answer a {
+	color: #39b5d5;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.faq__answer a:hover {
+	text-decoration: underline;
+}
+
 /* Footer */
 .footer {
 	background: #1a202c;
@@ -1159,6 +1222,7 @@ p {
 	.problem-solution__title,
 	.benefits__title,
 	.pricing__title,
+	.faq__title,
 	.download__title,
 	.screenshots__title {
 		font-size: 1.75rem;
@@ -1228,6 +1292,7 @@ p {
 	.features__title,
 	.benefits__title,
 	.pricing__title,
+	.faq__title,
 	.download__title,
 	.screenshots__title {
 		font-size: 1.4rem;
@@ -1298,6 +1363,7 @@ p {
 	.problem-solution__title,
 	.benefits__title,
 	.pricing__title,
+	.faq__title,
 	.download__title,
 	.screenshots__title {
 		font-size: 1.2rem;
